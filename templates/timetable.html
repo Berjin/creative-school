@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles/timetable.css' %}">
+<title>Timetable | {{request.user.studentprofile.standard}}</title>
+{% endblock %}
+{% block content %}
+<div id="main">
+  <h2 class="caption font-weight-bold"><i class="fa fa-calendar"></i>&nbsp;Timetable</h2>
+  <div class="table table-custom table-responsive">
+   <table class="mx-auto table-striped table-hover table-bordered">
+    <thead class="thead-dark">
+           <tr>
+               <th></th>
+               <th>1</th>
+               <th>2</th>
+               <th>3</th>
+               <th>4</th>
+               <th>5</th>
+               <th>6</th>
+               <th>7</th>
+               <th>8</th>
+           </tr>
+       </thead>
+       <tbody>
+           
+        {% for period in periods %}
+           <tr>
+               <th>{{period.day}}</th>
+               <td>{{period.period1}}</td>
+               <td>{{period.period2}}</td>
+                <td>{{period.period3}}</td>
+                <td>{{period.period4}}</td>
+                <td>{{period.period5}}</td>
+                <td>{{period.period6}}</td>
+                <td>{{period.period7}}</td>
+                <td>{{period.period8}}</td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table>
+  </div>
+</div>
+{% endblock %}

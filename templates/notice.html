@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles/notice.css' %}">
+<title>Notices | {{request.user|title}}</title>
+{% endblock %}
+{% block content %}
+<div id="main">
+        <div class="container">
+            <h2 style="text-align: center;"><i class="fa fa-bullhorn" aria-hidden="true"></i> Notices</h2>
+            <div class="card important">
+                <div class="card-header">
+                    <i style="color: red;" class="fa fa-exclamation-circle" aria-hidden="true"></i> Important
+                </div>
+            </div>
+            <div class="card important">
+                {% for important in importants %}
+                <div class="card-body">
+                <h5 class="card-title">{{important.title}}</h5>
+                <p class="card-text">{{important.description}}</p>
+                </div>
+                <div class="card-footer text-muted">
+                  Posted {{important.datetime|timesince}} ago
+                </div>
+                {% endfor %}
+            </div>
+            <div class="card first">
+                <div class="card-header">
+                    <i class="fa fa-sticky-note-o" aria-hidden="true"></i> Latest
+                </div>
+            </div>
+        {% for notice in notices %}
+        <div class="card middle">
+            <div class="card-body">
+            <h5 class="card-title">{{notice.title}}</h5>
+            <p class="card-text">{{notice.description}}</p>
+            </div>
+            <div class="card-footer text-muted">
+              Posted {{notice.datetime|timesince}} ago
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        
+   </div>
+   {% endblock %}

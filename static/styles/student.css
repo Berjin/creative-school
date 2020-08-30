@@ -1,0 +1,12 @@
+.intro{
+    width: 50%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.img-thumbnail{
+    width: 150px;
+    height: auto;
+}
+.container{
+  padding: 15px;
+}

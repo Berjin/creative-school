@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Berjin" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    {% block head %}
+
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'student' %}"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+        <a href="{% url 'notice' %}"><i class="fa fa-clipboard" aria-hidden="true"></i> Notice Board</a>
+        <a href="{% url 'timetable' %}"><i class="fa fa-calendar" aria-hidden="true"></i> Time Table</a>
+        <a href="{% url 'attendance' %}"><i class="fa fa-calendar-check-o"></i> Attendance</a>
+        <a href="{% url 'homework' %}"><i class="fa fa-book" aria-hidden="true"></i> Home Work</a>
+        <a href="{% url 'progress' %}"><i class="fa fa-line-chart" aria-hidden="true"></i> Progress</a>
+        <a href="{% url 'material' %}"><i class="fa fa-folder" aria-hidden="true"></i> Materials</a>
+        <a href="{% url 'contact' %}"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a>
+    </div>
+   {% include 'navbar.html' %}
+    <span class="side-toggle btn btn-success" title="Click here to see progress, study materials etc." style="cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+   {% block content %}
+
+   {% endblock %}
+   {% else %}
+        <div style="
+            text-align:center;
+            margin-top:50%;
+          ">
+        <h2>Sorry, You must login to view this page</h2>
+        <a href="{% url 'login' %}" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+        </div>
+        {% endif %}
+   <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        
+        </script>
+        
+</body>
+</html>

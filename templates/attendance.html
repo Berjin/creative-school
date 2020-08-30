@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles/attendance.css' %}">
+<title>Attendance | {{request.user|title}}</title>
+{% endblock %}
+{% block content %}
+<div id="main">
+       <h2 style="width:50%; text-align: center;" class="mx-auto"><i class="fa fa-calendar-check-o"></i> Attendance</h2>
+       {% for day in days %}
+       {% if today == day.date %}
+       <div class="attendance-today d-block mx-auto">
+        <h3>Today:</h3>
+        {% if day.present %}
+        {{user.first_name}} is present Today.<span style="color: green;font-size: 25px;">&check;</span>
+        {% else %}
+        {{user.first_name}} is Absent Today<span style="color: red;font-size: 25px;"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+        {% endif %}
+       </div>
+       {% endif %}
+        {% endfor %}
+        <div class="row">
+            <div class="col">
+                <div class="card card-body search">
+                    <form method="get">
+                        {% csrf_token %}
+                        {% for field in myFilter.form %}
+                        {{field.label}}
+                        {{field}}
+                        {% endfor %}
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+           {% for day in days %}   
+        <div class="attendance-day d-block col-lg-3 col-sm-6 col-xs-4">
+            <div class="inner-day">
+            <h4>{{day.date|date:'D, d M,Y'}}</h4>
+            {% if day.present %}
+            Present <span style="color: green;font-size: 25px;">&check;</span>
+            {% else %}
+            Absent <span style="color: red;font-size: 25px;"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+            {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+         </div>
+   </div>
+  {% endblock %}

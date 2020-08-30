@@ -1,0 +1,32 @@
+.col-md-4 .card{
+  height: 570px;
+  margin-top: 25px;    
+}
+.row .card:hover{
+  box-shadow: 0px 10px 30px rgba(0, 3, 3, 0.3);
+transform: scale(1.05);
+border-radius: 15px;
+}
+.row .card-footer{
+  height: 70px;
+  padding: 25px;
+  text-align: center;
+}
+.row .card-img-top{
+  height: 230px;
+}
+.modal .card-body{
+  padding: 5px;
+  height: 500px;
+}
+.modal .card{
+  margin-top: 5px;
+  padding: 5px;
+  font-weight: bold;
+  height: 200px;
+}
+.modal .card-footer{
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}

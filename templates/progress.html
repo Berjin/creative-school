@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles/progress.css' %}">
+<title>Progress | {{request.user.studentprofile.standard}}</title>
+{% endblock %}
+{% block content %}
+<div id="main">
+  <h2 class="caption font-weight-bold"><i class="fa fa-table"></i>&nbsp;Mark Sheet</h2>
+  <div class="table table-responsive">
+   <table class="mx-auto table-striped table-hover table-bordered">
+    <thead class="thead-dark">
+           <tr>
+               <th></th>
+               <th>January</th>
+               <th>February</th>
+               <th>March</th>
+               <th>April</th>
+               <th>May</th>
+               <th>June</th>
+               <th>July</th>
+               <th>August</th>
+               <th>September</th>
+               <th>October</th>
+               <th>November</th>
+               <th>December</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <th>Tamil</th>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+
+           </tr>
+           <tr>
+            <th>English</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th>Mathematics</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th>Science</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th>Social</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Marks</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Grade</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+       </tbody>
+   </table>
+  </div>
+  <div class="container alert alert-success"><strong>Congrats!</strong> You have secured "A" grade in the latest monthly exam. </div>
+</div>
+{% endblock %}

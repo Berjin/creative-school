@@ -1,0 +1,38 @@
+.attendance-today{
+  width: 50%;
+  height: auto;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  padding:10px;
+  padding-left: 25px;
+  display: block;
+  border: solid beige;
+}
+.attendance-day{
+  height: 120px;
+  font-weight: bold;
+  margin-top: 50px;
+  display: block;
+}
+.attendance-day:hover{
+  box-shadow: 0px 10px 30px rgba(27, 12, 77, 0.3);
+  transform: scale(1.05);
+}
+.attendance-today:hover{
+  box-shadow: 0px 10px 30px rgba(27, 12, 77, 0.3);
+  transform: scale(1.05);
+}
+.attendance-today h3{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.inner-day{
+  background-color: cyan;
+  height: 90px;
+  padding: 5px;
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+.card.search{
+  margin-top: 25px;
+}
