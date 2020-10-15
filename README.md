@@ -16,29 +16,29 @@ Demo website : https://creative-school.herokuapp.com/
 #### Student Profile
 On the landing page, students can see their details and photo.
 
-![Landing Page](/media/Screenshots/studentprofile.png?raw=true "Screenshot")
+![Landing Page](/media/Screenshots/studentprofile.png?raw=true "Student Profile")
 
 #### Homeworks
 On the homework page, students can see their upcoming homework with the deadline.
 
-![Homeworks](/media/Screenshots/homeworks.png?raw=true "Screenshot")
+![Homeworks](/media/Screenshots/homeworks.png?raw=true "Homeworks")
 
 #### Notices
 On the notice page, the school administration's common notices can be seen. Important notices are shown separately.
 
-![Time table](/media/Screenshots/notices.png?raw=true "Screenshot")
+![Notices](/media/Screenshots/notices.png?raw=true "Notices")
 
 #### Attendance
 On the attendance page, students can see their attendance. It also helps parents to monitor their ward's attendance. The search feature allows us to search whether the student was present on a particular day.
 
-![Attendance](/media/Screenshots/attendance.png?raw=true "Screenshot")
+![Attendance](/media/Screenshots/attendance.png?raw=true "Attendance")
 
 #### Study Materials
 On the study materials page, students can see study materials posted by their teachers.
 
-![Study Materials](/media/Screenshots/studymaterials.png?raw=true "Screenshot")
+![Study Materials](/media/Screenshots/studymaterials.png?raw=true "Study Materials")
 
 #### Time table
 On the timetable page, students can see their timetable.
 
-![Time table](/media/Screenshots/Timetable.png?raw=true "Screenshot")
+![Time table](/media/Screenshots/Timetable.png?raw=true "Time table")
