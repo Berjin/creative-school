@@ -1,5 +1,5 @@
 # Creative School
-This responsive Website is created with Django. 
+This responsive website is created using Django. This website provides personalized learning experiences for students. It helps students to keep track of their attendance and homework. Students can also access study materials posted by their teachers.
 
 ## Demo Website
 Demo website : https://creative-school.herokuapp.com/
@@ -14,12 +14,31 @@ Demo website : https://creative-school.herokuapp.com/
 
 ## Screenshots
 #### Student Profile
+On the landing page, students can see their details and photo.
+
 ![Landing Page](/media/Screenshots/studentprofile.png?raw=true "Screenshot")
+
 #### Homeworks
+On the homework page, students can see their upcoming homework with the deadline.
+
 ![Homeworks](/media/Screenshots/homeworks.png?raw=true "Screenshot")
+
+#### Notices
+On the notice page, the school administration's common notices can be seen. Important notices are shown separately.
+
+![Time table](/media/Screenshots/notices.png?raw=true "Screenshot")
+
 #### Attendance
+On the attendance page, students can see their attendance. It also helps parents to monitor their ward's attendance. The search feature allows us to search whether the student was present on a particular day.
+
 ![Attendance](/media/Screenshots/attendance.png?raw=true "Screenshot")
+
 #### Study Materials
+On the study materials page, students can see study materials posted by their teachers.
+
 ![Study Materials](/media/Screenshots/studymaterials.png?raw=true "Screenshot")
+
 #### Time table
+On the timetable page, students can see their timetable.
+
 ![Time table](/media/Screenshots/Timetable.png?raw=true "Screenshot")
