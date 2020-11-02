@@ -1,4 +1,9 @@
 # Creative School
+<p>
+  <img alt="Github issues" src="https://img.shields.io/github/issues/berjin/creative-school">
+  <img alt="Github forks" src="https://img.shields.io/github/forks/berjin/creative-school">
+  <img alt="Github stars" src="https://img.shields.io/github/stars/berjin/creative-school">
+</p>
 This responsive website is created using Django. This website provides personalized learning experiences for students. It helps students to keep track of their attendance and homework. Students can also access study materials posted by their teachers.
 
 ## Demo Website
